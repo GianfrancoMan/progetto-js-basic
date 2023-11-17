@@ -4,8 +4,7 @@ let elemCount = document.querySelector('.count>span');      //The document eleme
 
 document.querySelector('.btn.reset').style.visibility = "hidden";       //It starts with the hidden reset button
 
-dynamicContainer.addEventListener('pointerdown', (event)=>{
-    event.preventDefault();
+dynamicContainer.addEventListener('click', (event)=>{
     let elem = event.target;
     let action = elem.dataset.action.toLowerCase();
 
@@ -18,17 +17,21 @@ dynamicContainer.addEventListener('pointerdown', (event)=>{
         changeCount(++count);
     }
 
-    if(action == 'down') {
+    else if(action == 'down') {
         changeCount(--count);
     }
 
-    if(action == 'reset') {
+    else {
         count = 0;
         changeCount();
     }
 
     document.querySelector('.btn.reset').style.visibility = count == 0 ? "hidden" : "visible";      // The reset button become invisible if count is equal to 0
 });
+
+content.addEventListener('pointerdown', (event)=>{      //To avoid mouse selection in whole page when mousedown events occurs.
+    event.preventDefault();
+})
 
 //Models the count element, the small delay is to allow for the color change
 //that would otherwise be imperceptible.
