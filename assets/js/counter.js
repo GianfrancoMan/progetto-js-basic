@@ -14,17 +14,17 @@ dynamicContainer.addEventListener('click', (event)=>{
     elemCount.closest('.count').style.boxShadow = "10px 5px 5px rgb(248, 238, 238), -10px -5px 5px rgb(248, 238, 238)";     //...and its container get a shadow
     
     if(action == 'up') {
-        playSoundEffect("/assets/audio/cartoon-jump.mp3");
+        playSoundEffect("assets/audio/cartoon-jump.mp3");
         changeCount(++count);
     }
 
     else if(action == 'down') {
-        playSoundEffect("/assets/audio/strings_ofg6Kxg.mp3");
+        playSoundEffect("assets/audio/strings_ofg6Kxg.mp3");
         changeCount(--count);
     }
 
     else {
-        playSoundEffect("/assets/audio/zapsplat_cartoon_climb_down_descend_fast_steps_ladder_cute_001_38466.mp3");
+        playSoundEffect("assets/audio/zapsplat_cartoon_climb_down_descend_fast_steps_ladder_cute_001_38466.mp3");
         count = 0;
         changeCount();
     }
