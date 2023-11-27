@@ -1,6 +1,8 @@
+
 let count = 0;
+elemCount = document.querySelector('.count>span');      //The document element that contain the count value.
 let dynamicContainer = document.querySelector('#dynamic_container');    // The document element that contains the button elements
-let elemCount = document.querySelector('.count>span');      //The document element that contain the count value.
+
 
 document.querySelector('.btn.reset').style.visibility = "hidden";       //It starts with the hidden reset button
 
